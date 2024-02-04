@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fantasymod:firemetal_ingot"
+    }
+  },
+  "result": {
+    "item": "fantasymod:firemetal_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fantasymod:firemetal_block"
+    }
+  ],
+  "result": {
+    "item": "fantasymod:firemetal_ingot",
+    "count": 9
+  }
+}

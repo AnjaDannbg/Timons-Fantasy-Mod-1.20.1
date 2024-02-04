@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fantasymod:raw_firemetal"
+    }
+  },
+  "result": {
+    "item": "fantasymod:raw_firemetal_block"
+  }
+}
