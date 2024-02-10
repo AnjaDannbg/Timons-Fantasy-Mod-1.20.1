@@ -2,8 +2,11 @@ package net.anjadannenberg.fantasymod;
 
 import com.mojang.logging.LogUtils;
 import net.anjadannenberg.fantasymod.block.ModBlocks;
+import net.anjadannenberg.fantasymod.entity.ModEntities;
+import net.anjadannenberg.fantasymod.entity.client.ManaStagRenderer;
 import net.anjadannenberg.fantasymod.item.ModCreativeModTabs;
 import net.anjadannenberg.fantasymod.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +37,8 @@ public class FantasyMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModEntities.register(modEventBus);
 
 
         // Register the commonSetup method for modloading
@@ -75,6 +80,7 @@ public class FantasyMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntities.MANA_STAG.get(), ManaStagRenderer::new);
         }
     }
 }

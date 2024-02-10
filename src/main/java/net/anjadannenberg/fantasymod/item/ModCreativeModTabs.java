@@ -26,6 +26,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.RAW_FIREMETAL_BLOCK.get());
                         pOutput.accept(ModBlocks.FIREMETAL_ORE.get());
 
+                        pOutput.accept(ModItems.MANA_STAG_SPAWN_EGG.get());
+
                     })
                     .build());
 
