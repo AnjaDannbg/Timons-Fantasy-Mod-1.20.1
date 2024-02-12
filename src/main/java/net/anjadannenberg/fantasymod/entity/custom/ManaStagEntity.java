@@ -34,7 +34,7 @@ public class ManaStagEntity extends Animal {
     public void tick() {
         super.tick();
         if(this.level().isClientSide) {
-
+            setupAnimationStates();
         }
 
     }
@@ -42,6 +42,7 @@ public class ManaStagEntity extends Animal {
     private void setupAnimationStates() {
         if(this.idleAnimationTimeout <= 0) {
             this.idleAnimationTimeout = this.random.nextInt(40) + 80;
+            this.idleAnimationState.start(this.tickCount);
         } else {
             --this.idleAnimationTimeout;
         }
@@ -55,6 +56,8 @@ public class ManaStagEntity extends Animal {
         } else {
             f = 0f;
         }
+
+        this.walkAnimation.update(f, 0.2f);
     }
 
 
@@ -63,7 +66,7 @@ public class ManaStagEntity extends Animal {
         this.goalSelector.addGoal(0, new FloatGoal(this));
 
         this.goalSelector.addGoal(1, new BreedGoal(this, 1.15D));
-        this.goalSelector.addGoal(2, new TemptGoal(this, 1.2D, Ingredient.of(Items.ENDER_PEARL), false));
+        this.goalSelector.addGoal(2, new TemptGoal(this, 1.2D, Ingredient.of(Items.ENCHANTED_GOLDEN_APPLE), false));
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.1D));
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.1D));
         this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 3f));
@@ -101,7 +104,7 @@ public class ManaStagEntity extends Animal {
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return super.getHurtSound(pDamageSource);
+        return SoundEvents.DOLPHIN_HURT;
     }
 
     @Nullable

@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class ManaStagRenderer extends MobRenderer<ManaStagEntity, ManaStagModel<ManaStagEntity>> {
     public ManaStagRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new ManaStagModel<>(pContext.bakeLayer(ModModelLayers.MANA_STAG_LAYER)), 2f);
+        super(pContext, new ManaStagModel<>(pContext.bakeLayer(ModModelLayers.MANA_STAG_LAYER)), 0.7F);
     }
 
     @Override
