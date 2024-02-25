@@ -23,8 +23,10 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-        oreSmelting(pWriter, FIREMETAL_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_FIREMETAL.get(), 0.7f, 200, "firemetal_ingot");
-        oreBlasting(pWriter, FIREMETAL_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_FIREMETAL.get(), 0.7f, 100, "firemetal_ingot");
+        oreSmelting(pWriter, FIREMETAL_SMELTABLES, RecipeCategory.MISC, ModItems.FIREMETAL_INGOT.get(),
+                0.7f, 200, "firemetal_ingot");
+        oreBlasting(pWriter, FIREMETAL_SMELTABLES, RecipeCategory.MISC, ModItems.FIREMETAL_INGOT.get(),
+                0.7f, 100, "firemetal_ingot");
 
 
 

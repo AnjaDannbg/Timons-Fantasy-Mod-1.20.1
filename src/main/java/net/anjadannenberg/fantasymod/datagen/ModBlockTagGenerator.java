@@ -31,9 +31,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.FIREMETAL_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.FIREMETAL_BLOCK.get());
+
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.FIREMETAL_ORE.get(),
-                        ModBlocks.RAW_FIREMETAL_BLOCK.get(),
-                        ModBlocks.FIREMETAL_BLOCK.get());
+                        ModBlocks.RAW_FIREMETAL_BLOCK.get());
 
     }
 }
