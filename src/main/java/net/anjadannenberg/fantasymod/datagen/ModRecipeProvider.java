@@ -5,6 +5,7 @@ import net.anjadannenberg.fantasymod.block.ModBlocks;
 import net.anjadannenberg.fantasymod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -25,6 +26,17 @@ public class ModRecipeProvider extends RecipeProvider {
         oreSmelting(pWriter, FIREMETAL_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_FIREMETAL.get(), 0.7f, 200, "firemetal_ingot");
         oreBlasting(pWriter, FIREMETAL_SMELTABLES, RecipeCategory.MISC, ModItems.RAW_FIREMETAL.get(), 0.7f, 100, "firemetal_ingot");
 
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.FIRE_SWORD.get())
+                .pattern("#")
+                .pattern("#")
+                .pattern("!")
+                .define('#', ModItems.FIREMETAL_INGOT.get())
+                .define('!', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FIREMETAL_INGOT.get()), has(ModItems.FIREMETAL_INGOT.get()))
+                .save(pWriter);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIREMETAL_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
@@ -33,9 +45,22 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModItems.FIREMETAL_INGOT.get()), has(ModItems.FIREMETAL_INGOT.get()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_FIREMETAL_BLOCK.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.RAW_FIREMETAL.get())
+                .unlockedBy(getHasName(ModItems.RAW_FIREMETAL.get()), has(ModItems.RAW_FIREMETAL.get()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FIREMETAL_INGOT.get(), 9)
                 .requires(ModBlocks.FIREMETAL_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.FIREMETAL_BLOCK.get()), has(ModBlocks.FIREMETAL_BLOCK.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_FIREMETAL.get(), 9)
+                .requires(ModBlocks.RAW_FIREMETAL_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RAW_FIREMETAL_BLOCK.get()), has(ModBlocks.RAW_FIREMETAL_BLOCK.get()))
                 .save(pWriter);
     }
 
