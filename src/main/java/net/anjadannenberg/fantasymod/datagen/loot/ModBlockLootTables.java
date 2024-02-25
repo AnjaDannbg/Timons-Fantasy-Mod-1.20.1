@@ -29,7 +29,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RAW_FIREMETAL_BLOCK.get());
 
         this.add(ModBlocks.FIREMETAL_ORE.get(),
-                block -> createCopperLikeOreDrops(ModBlocks.FIREMETAL_ORE.get(), ModItems.RAW_FIREMETAL.get()));
+                block -> createOreDrop(ModBlocks.FIREMETAL_ORE.get(), ModItems.RAW_FIREMETAL.get()));
 
     }
 
@@ -38,6 +38,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.applyExplosionDecay(pBlock,
                         LootItem.lootTableItem(item)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+    }
+
+    protected LootTable.Builder createOreDrop(Block pBlock, Item pItem) {
+        return createSilkTouchDispatchTable(pBlock,
+                this.applyExplosionDecay(pBlock,
+                        LootItem.lootTableItem(pItem)
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
 

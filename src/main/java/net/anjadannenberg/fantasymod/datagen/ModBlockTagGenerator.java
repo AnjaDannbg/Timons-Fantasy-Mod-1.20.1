@@ -34,5 +34,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.FIREMETAL_ORE.get(),
                         ModBlocks.RAW_FIREMETAL_BLOCK.get(),
                         ModBlocks.FIREMETAL_BLOCK.get());
+
     }
 }
