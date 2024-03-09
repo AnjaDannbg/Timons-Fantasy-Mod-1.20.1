@@ -3,7 +3,9 @@ package net.anjadannenberg.fantasymod;
 import com.mojang.logging.LogUtils;
 import net.anjadannenberg.fantasymod.block.ModBlocks;
 import net.anjadannenberg.fantasymod.entity.ModEntities;
+import net.anjadannenberg.fantasymod.entity.client.DemonBossRenderer;
 import net.anjadannenberg.fantasymod.entity.client.ManaStagRenderer;
+import net.anjadannenberg.fantasymod.entity.custom.DemonBossEntity;
 import net.anjadannenberg.fantasymod.item.ModCreativeModTabs;
 import net.anjadannenberg.fantasymod.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -82,6 +84,7 @@ public class FantasyMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntities.MANA_STAG.get(), ManaStagRenderer::new);
+            EntityRenderers.register(ModEntities.DEMON_BOSS.get(), DemonBossRenderer::new);
         }
     }
 }

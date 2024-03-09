@@ -1,6 +1,7 @@
 package net.anjadannenberg.fantasymod.entity;
 
 import net.anjadannenberg.fantasymod.FantasyMod;
+import net.anjadannenberg.fantasymod.entity.custom.DemonBossEntity;
 import net.anjadannenberg.fantasymod.entity.custom.ManaStagEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -16,6 +17,10 @@ public class ModEntities {
     public static final RegistryObject<EntityType<ManaStagEntity>> MANA_STAG =
             ENTITY_TYPES.register("mana_stag", () -> EntityType.Builder.of(ManaStagEntity::new, MobCategory.CREATURE)
                     .sized(2.0f, 2.0f).build("mana_stag"));
+
+    public static final RegistryObject<EntityType<DemonBossEntity>> DEMON_BOSS =
+            ENTITY_TYPES.register("demon_boss", () -> EntityType.Builder.of(DemonBossEntity::new, MobCategory.MONSTER)
+                    .sized(2.0f, 2.0f).build("demon_boss"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

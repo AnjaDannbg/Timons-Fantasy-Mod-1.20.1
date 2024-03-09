@@ -24,11 +24,18 @@ public class ModItems {
     public static final RegistryObject<Item> FIRE_SWORD = ITEMS.register("fire_sword",
             () -> new FireSwordItem());
 
+    public static final RegistryObject<Item> FIRE_CLAYMORE = ITEMS.register("fire_claymore",
+            () -> new FireSwordItem());
+
 
 
     public static final RegistryObject<Item> MANA_STAG_SPAWN_EGG = ITEMS.register("mana_stag_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.MANA_STAG, 0x7e9680, 0x5d1c5,
             new Item.Properties()));
+
+    public static final RegistryObject<Item> DEMON_BOSS_SPAWN_EGG = ITEMS.register("demon_boss_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.DEMON_BOSS, 0x3b0202, 0xedae77,
+                    new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
