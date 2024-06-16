@@ -53,6 +53,7 @@ public class DemonBossModel<T extends Entity> extends HierarchicalModel<T> {
     @Override
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.root().getAllParts().forEach(ModelPart::resetPose);
+        this.animateWalk(ModAnimationDefinitions.DEMON_BOSS_IDLE, limbSwing, limbSwingAmount, 1f, 1f);
         this.animate(((DemonBossEntity) entity).idleAnimationState, ModAnimationDefinitions.DEMON_BOSS_IDLE, ageInTicks, 1f);
     }
 

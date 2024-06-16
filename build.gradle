@@ -80,6 +80,10 @@ minecraft {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
 
+            //You have to set mixin propert if you want to run playerAnimator in development environment.
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+
             mods {
                 "${mod_id}" {
                     source sourceSets.main
@@ -99,6 +103,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             property 'forge.enabledGameTestNamespaces', mod_id
+
+            //Add this to the server too.
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
                 "${mod_id}" {
@@ -168,6 +176,7 @@ repositories {
         name "KosmX's maven"
         url 'https://maven.kosmx.dev/'
     }
+
 }
 
 dependencies {
@@ -178,14 +187,18 @@ dependencies {
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
+    //modApi "me.shedaniel.cloth:cloth-config-forge:11.1.118"
 
     /*
+    //Cloth Config
     implementation fg.deobf('maven.modrinth:better-combat:VERSION-forge')
-    modApi("e.shedaniel.cloth:cloth-config-fabric:ABC") {
+    modApi("e.shedaniel.cloth:cloth-config-fabric:11.1.118") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    */
 
+     */
+
+    //implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${project.player_anim}")
 
     //If you don't want to include the library in your jar, remove the include word
     /*
