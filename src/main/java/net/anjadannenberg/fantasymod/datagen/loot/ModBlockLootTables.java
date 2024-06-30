@@ -30,6 +30,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.FIREMETAL_ORE.get(),
                 block -> createOreDrop(ModBlocks.FIREMETAL_ORE.get(), ModItems.RAW_FIREMETAL.get()));
+        this.add(ModBlocks.DEEPSLATE_FIREMETAL_ORE.get(),
+                block -> createOreDrop(ModBlocks.DEEPSLATE_FIREMETAL_ORE.get(), ModItems.RAW_FIREMETAL.get()));
+        this.add(ModBlocks.NETHERRACK_FIREMETAL_ORE.get(),
+                block -> createOreDrop(ModBlocks.NETHERRACK_FIREMETAL_ORE.get(), ModItems.RAW_FIREMETAL.get()));
 
     }
 

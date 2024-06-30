@@ -19,6 +19,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RAW_FIREMETAL_BLOCK);
 
         blockWithItem(ModBlocks.FIREMETAL_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_FIREMETAL_ORE);
+        blockWithItem(ModBlocks.NETHERRACK_FIREMETAL_ORE);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

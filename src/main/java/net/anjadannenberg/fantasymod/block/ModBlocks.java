@@ -29,6 +29,14 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)
                     .strength(3.0F, 3.0F).requiresCorrectToolForDrops()
             ));
+    public static final RegistryObject<Block> DEEPSLATE_FIREMETAL_ORE = registerBlock("deepslate_firemetal_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)
+                    .strength(3.0F, 3.0F).requiresCorrectToolForDrops()
+            ));
+    public static final RegistryObject<Block> NETHERRACK_FIREMETAL_ORE = registerBlock("netherrack_firemetal_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)
+                    .strength(3.0F, 3.0F).requiresCorrectToolForDrops()
+            ));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
