@@ -27,9 +27,12 @@ public class ModConfiguredFeatures {
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
 
-        List<OreConfiguration.TargetBlockState> overworldSapphireOres = List.of(OreConfiguration.target(stoneReplaceable,
+        List<OreConfiguration.TargetBlockState> overworldFiremetalOres = List.of(OreConfiguration.target(stoneReplaceable,
                 ModBlocks.FIREMETAL_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_FIREMETAL_ORE.get().defaultBlockState()));
+
+        register(context, OVERWORLD_FIREMETAL_ORE_KEY, Feature.ORE, new OreConfiguration(overworldFiremetalOres, 9));
+        register(context, NETHER_FIREMETAL_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables, ModBlocks.NETHERRACK_FIREMETAL_ORE.get().defaultBlockState(), 9));
     }
 
 

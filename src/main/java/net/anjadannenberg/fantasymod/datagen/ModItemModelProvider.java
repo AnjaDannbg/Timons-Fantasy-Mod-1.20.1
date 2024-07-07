@@ -21,7 +21,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.FIREMETAL_INGOT);
         simpleItem(ModItems.RAW_FIREMETAL);
-        simpleItem(ModItems.FIRE_SWORD);
+        handheldItem(ModItems.FIRE_SWORD);
         simpleItem(ModItems.FIRE_CLAYMORE);
 
         withExistingParent(ModItems.MANA_STAG_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
@@ -32,6 +32,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(FantasyMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(FantasyMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 }
