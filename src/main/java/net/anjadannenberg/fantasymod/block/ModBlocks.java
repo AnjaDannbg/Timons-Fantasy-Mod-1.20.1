@@ -3,11 +3,14 @@ package net.anjadannenberg.fantasymod.block;
 import net.anjadannenberg.fantasymod.FantasyMod;
 import net.anjadannenberg.fantasymod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -33,9 +36,14 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)
                     .strength(3.0F, 3.0F).requiresCorrectToolForDrops()
             ));
+
     public static final RegistryObject<Block> NETHERRACK_FIREMETAL_ORE = registerBlock("netherrack_firemetal_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)
                     .strength(3.0F, 3.0F).requiresCorrectToolForDrops()
+            ));
+    public static final RegistryObject<Block> INFLOWEL = registerBlock("inflowel",
+            () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                    BlockBehaviour.Properties.copy(Blocks.TORCHFLOWER).noOcclusion().noCollission()
             ));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
