@@ -21,6 +21,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.FIREMETAL_INGOT.get());
                         pOutput.accept(ModItems.RAW_FIREMETAL.get());
                         pOutput.accept(ModItems.FIRE_SWORD.get());
+                        pOutput.accept(ModItems.FIRE_LONGSWORD.get());
 
                         pOutput.accept(ModBlocks.FIREMETAL_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_FIREMETAL_BLOCK.get());

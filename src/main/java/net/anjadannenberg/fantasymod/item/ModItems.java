@@ -2,6 +2,8 @@ package net.anjadannenberg.fantasymod.item;
 
 import net.anjadannenberg.fantasymod.FantasyMod;
 import net.anjadannenberg.fantasymod.entity.ModEntities;
+import net.anjadannenberg.fantasymod.item.custom.FireClaymoreItem;
+import net.anjadannenberg.fantasymod.item.custom.FireLongswordItem;
 import net.anjadannenberg.fantasymod.item.custom.FireSwordItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
@@ -25,7 +27,10 @@ public class ModItems {
             () -> new FireSwordItem());
 
     public static final RegistryObject<Item> FIRE_CLAYMORE = ITEMS.register("fire_claymore",
-            () -> new FireSwordItem());
+            () -> new FireClaymoreItem());
+
+    public static final RegistryObject<Item> FIRE_LONGSWORD = ITEMS.register("fire_longsword",
+            () -> new FireLongswordItem());
 
 
 

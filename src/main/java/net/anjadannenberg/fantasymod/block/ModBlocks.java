@@ -41,10 +41,13 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)
                     .strength(3.0F, 3.0F).requiresCorrectToolForDrops()
             ));
+    /*
     public static final RegistryObject<Block> INFLOWEL = registerBlock("inflowel",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
                     BlockBehaviour.Properties.copy(Blocks.TORCHFLOWER).noOcclusion().noCollission()
             ));
+
+     */
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

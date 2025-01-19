@@ -22,7 +22,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FIREMETAL_INGOT);
         simpleItem(ModItems.RAW_FIREMETAL);
         handheldItem(ModItems.FIRE_SWORD);
-        simpleItem(ModItems.FIRE_CLAYMORE);
+        //handheldItem(ModItems.FIRE_CLAYMORE);
+        handheldItem(ModItems.FIRE_LONGSWORD);
 
         withExistingParent(ModItems.MANA_STAG_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.DEMON_BOSS_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

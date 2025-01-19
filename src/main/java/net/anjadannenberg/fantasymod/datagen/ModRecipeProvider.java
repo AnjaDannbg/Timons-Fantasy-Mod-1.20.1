@@ -39,6 +39,14 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModItems.FIREMETAL_INGOT.get()), has(ModItems.FIREMETAL_INGOT.get()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.FIRE_LONGSWORD.get())
+                .pattern("#")
+                .pattern("!")
+                .define('#', ModItems.FIREMETAL_INGOT.get())
+                .define('!', ModItems.FIRE_SWORD.get())
+                .unlockedBy(getHasName(ModItems.FIRE_SWORD.get()), has(ModItems.FIRE_SWORD.get()))
+                .save(pWriter);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIREMETAL_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
