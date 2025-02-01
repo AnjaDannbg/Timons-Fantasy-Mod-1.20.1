@@ -35,6 +35,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.NETHERRACK_FIREMETAL_ORE.get(),
                 block -> createOreDrop(ModBlocks.NETHERRACK_FIREMETAL_ORE.get(), ModItems.RAW_FIREMETAL.get()));
 
+        this.dropSelf(ModBlocks.INFLOWEL.get());
+        this.add(ModBlocks.POTTED_INFLOWEL.get(), createPotFlowerItemTable(ModBlocks.INFLOWEL.get()));
+
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

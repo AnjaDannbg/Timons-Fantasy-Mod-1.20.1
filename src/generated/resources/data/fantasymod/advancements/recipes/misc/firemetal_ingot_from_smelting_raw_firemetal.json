@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_firemetal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fantasymod:raw_firemetal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fantasymod:firemetal_ingot_from_smelting_raw_firemetal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_firemetal",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fantasymod:firemetal_ingot_from_smelting_raw_firemetal"
+    ]
+  },
+  "sends_telemetry_event": false
+}

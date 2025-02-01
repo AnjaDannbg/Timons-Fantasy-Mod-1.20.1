@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "firemetal_ingot",
+  "ingredient": {
+    "item": "fantasymod:firemetal_ore"
+  },
+  "result": "fantasymod:firemetal_ingot"
+}

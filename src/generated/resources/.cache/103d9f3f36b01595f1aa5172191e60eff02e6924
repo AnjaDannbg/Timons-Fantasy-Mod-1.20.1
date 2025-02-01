@@ -1,0 +1,7 @@
+// 1.20.1	2024-07-07T10:54:19.1534244	Registries
+ee87d9022add3de8ff750a13b6a32e0ff5824ada data/fantasymod/forge/biome_modifier/add_firemetal_ore.json
+aa2733092404fae657d2453b35821c8572bbe8db data/fantasymod/forge/biome_modifier/add_nether_firemetal_ore.json
+93aaf16d6911dd330398801bcd2e10e6d4583ab4 data/fantasymod/worldgen/configured_feature/firemetal_ore.json
+1231f9f75f92553fd6c0d196a13d98da1d01ac95 data/fantasymod/worldgen/configured_feature/nether_firemetal_ore.json
+135a9b62c5a6d566194707ab8b92aa0110b99aec data/fantasymod/worldgen/placed_feature/firemetal_ore_placed.json
+6384066915ec403270512a0c9536f7d6a9e7b1dc data/fantasymod/worldgen/placed_feature/nether_firemetal_ore_placed.json

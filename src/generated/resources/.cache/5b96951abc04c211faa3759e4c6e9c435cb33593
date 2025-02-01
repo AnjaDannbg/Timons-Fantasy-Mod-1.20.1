@@ -1,0 +1,5 @@
+// 1.20.1	2024-06-16T17:39:06.6435523	Tags for minecraft:block mod id fantasymod
+51d4aad850c607d73232f2c52aa61133238fc6af data/fantasymod/tags/blocks/metal_detector_valuables.json
+ffb923817d04a1aa8269c9f8894ccab42b4f9b65 data/minecraft/tags/blocks/mineable/pickaxe.json
+07078892bb4b9f3ea6d78f501d34a7f18acce366 data/minecraft/tags/blocks/needs_diamond_tool.json
+2896a306a106a16dd61621683df41ff9d73c6e93 data/minecraft/tags/blocks/needs_iron_tool.json

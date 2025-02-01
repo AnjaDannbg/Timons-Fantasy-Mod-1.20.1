@@ -28,8 +28,16 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.FIREMETAL_ORE.get());
                         pOutput.accept(ModBlocks.DEEPSLATE_FIREMETAL_ORE.get());
                         pOutput.accept(ModBlocks.NETHERRACK_FIREMETAL_ORE.get());
+                        pOutput.accept(ModBlocks.INFLOWEL.get());
+
+                        pOutput.accept(ModItems.FIREMETAL_INGOT.get());
+                        pOutput.accept(ModItems.RAW_FIREMETAL.get());
+                        pOutput.accept(ModItems.FIRE_SWORD.get());
+                        pOutput.accept(ModItems.FIRE_CLAYMORE.get());
 
                         pOutput.accept(ModItems.MANA_STAG_SPAWN_EGG.get());
+
+
 
                     })
                     .build());

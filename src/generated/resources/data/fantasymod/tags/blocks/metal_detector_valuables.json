@@ -1,0 +1,10 @@
+{
+  "values": [
+    "fantasymod:firemetal_ore",
+    "#forge:ores",
+    "fantasymod:deepslate_firemetal_ore",
+    "#forge:ores",
+    "fantasymod:netherrack_firemetal_ore",
+    "#forge:ores"
+  ]
+}
